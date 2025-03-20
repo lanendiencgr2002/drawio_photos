@@ -110,7 +110,7 @@
           <mxGeometry x="394" y="760" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="b7_Y6A8liDHWVlcpCu6--45" value="更新跳转关系表" style="rounded=0;whiteSpace=wrap;html=1;comic=1;opacity=67;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=18;fontColor=light-dark(#00CCCC,#FF9090);fontStyle=1;labelBorderColor=none;labelBackgroundColor=none;autosize=0;fillColor=#fff2cc;gradientColor=none;" vertex="1" parent="1">
-          <mxGeometry x="210" y="760" width="120" height="60" as="geometry" />
+          <mxGeometry x="220" y="760" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
