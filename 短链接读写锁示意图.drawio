@@ -94,7 +94,7 @@
         <mxCell id="b7_Y6A8liDHWVlcpCu6--48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=18;fontColor=light-dark(#00CCCC,#FF9090);fontStyle=1;labelBorderColor=none;labelBackgroundColor=none;autosize=0;" edge="1" parent="1" source="b7_Y6A8liDHWVlcpCu6--41" target="b7_Y6A8liDHWVlcpCu6--42">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="b7_Y6A8liDHWVlcpCu6--41" value="获取写锁lock" style="rounded=0;whiteSpace=wrap;html=1;comic=1;opacity=67;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=18;fontColor=light-dark(#00CCCC,#FF9090);fontStyle=1;labelBorderColor=none;labelBackgroundColor=none;autosize=0;fillColor=#fff2cc;gradientColor=none;" vertex="1" parent="1">
+        <mxCell id="b7_Y6A8liDHWVlcpCu6--41" value="获取写锁lock&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;comic=1;opacity=67;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=18;fontColor=light-dark(#00CCCC,#FF9090);fontStyle=1;labelBorderColor=none;labelBackgroundColor=none;autosize=0;fillColor=#fff2cc;gradientColor=none;" vertex="1" parent="1">
           <mxGeometry x="187.5" y="585" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="b7_Y6A8liDHWVlcpCu6--49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=18;fontColor=light-dark(#00CCCC,#FF9090);fontStyle=1;labelBorderColor=none;labelBackgroundColor=none;autosize=0;" edge="1" parent="1" source="b7_Y6A8liDHWVlcpCu6--42" target="b7_Y6A8liDHWVlcpCu6--44">
