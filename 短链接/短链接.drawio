@@ -1,0 +1,430 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5" pages="3">
+  <diagram id="CpptZHGsFicf_dWtSvY0" name="用户crud逻辑">
+    <mxGraphModel dx="1327" dy="661" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-1" value="注册" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#d79b00;fillColor=#ffe6cc;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="20" y="13" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="h9o2qhdS5XBRjAzYTPhi-2" target="h9o2qhdS5XBRjAzYTPhi-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-2" value="&lt;div style=&quot;background-color: rgb(255, 255, 255); line-height: 19px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;color: rgb(120, 120, 120); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; font-weight: normal; white-space: pre;&quot;&gt;检查用户名是否已存在（&lt;/span&gt;&lt;font face=&quot;Consolas, Courier New, monospace&quot; color=&quot;#787878&quot;&gt;&lt;span style=&quot;font-size: 14px; white-space: pre;&quot;&gt;布隆过滤器&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;color: rgb(120, 120, 120); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; font-weight: normal; white-space: pre;&quot;&gt;）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="20" y="60" width="270" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="h9o2qhdS5XBRjAzYTPhi-3" target="h9o2qhdS5XBRjAzYTPhi-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-3" value="&lt;div style=&quot;background-color: rgb(255, 255, 255); line-height: 19px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;color: rgb(120, 120, 120); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; font-weight: normal; white-space: pre;&quot;&gt;获取分布式锁（trylock），防止并发注册&lt;/span&gt;&lt;font face=&quot;Consolas, Courier New, monospace&quot; color=&quot;#787878&quot;&gt;&lt;span style=&quot;font-size: 14px; white-space: pre;&quot;&gt;同一个用户名&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="310" y="60" width="370" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="h9o2qhdS5XBRjAzYTPhi-4" target="h9o2qhdS5XBRjAzYTPhi-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-4" value="&lt;div style=&quot;color: #141414;background-color: #ffffff;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #787878;&quot;&gt;为新用户创建默认分组&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="710" y="60" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-5" value="&lt;div style=&quot;color: #141414;background-color: #ffffff;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #787878;&quot;&gt;将用户名添加到布隆过滤器中&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="690" y="130" width="220" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-11" value="修改" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#d79b00;fillColor=#ffe6cc;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="20" y="120" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="h9o2qhdS5XBRjAzYTPhi-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-16" value="&lt;div style=&quot;background-color: rgb(255, 255, 255); line-height: 19px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;color: rgb(120, 120, 120); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; font-weight: normal; white-space: pre;&quot;&gt;安全检查：确保用户只能修改自己的信息（&lt;/span&gt;&lt;font face=&quot;Consolas, Courier New, monospace&quot; color=&quot;#787878&quot;&gt;&lt;span style=&quot;font-size: 14px; white-space: pre;&quot;&gt;判断上下文中的用户名是否对得上&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;color: rgb(120, 120, 120); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; font-weight: normal; white-space: pre;&quot;&gt;）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="20" y="180" width="530" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-22" value="更新" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="600" y="180" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-24" value="登录" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#d79b00;fillColor=#ffe6cc;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="20" y="240" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="h9o2qhdS5XBRjAzYTPhi-25" target="h9o2qhdS5XBRjAzYTPhi-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="h9o2qhdS5XBRjAzYTPhi-25" target="h9o2qhdS5XBRjAzYTPhi-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="h9o2qhdS5XBRjAzYTPhi-25" target="h9o2qhdS5XBRjAzYTPhi-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-25" value="&lt;div style=&quot;color: #141414;background-color: #ffffff;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #787878;&quot;&gt;验证用户账号密码&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="20" y="290" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-26" value="&lt;div style=&quot;color: #141414;background-color: #ffffff;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #787878;&quot;&gt;用户不存在或密码错误&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="5" y="350" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-27" value="&lt;div style=&quot;color: #141414;background-color: #ffffff;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #787878;&quot;&gt;如果已登录则续期并返回现有token，&lt;/span&gt;&lt;span style=&quot;color: rgb(120, 120, 120);&quot;&gt;延长登录有效期&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="220" y="270" width="370" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-30" value="&lt;div style=&quot;color: #141414;background-color: #ffffff;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #787878;&quot;&gt;如果已经过期了，创建新的登录会话，&lt;/span&gt;&lt;span style=&quot;color: rgb(120, 120, 120);&quot;&gt;重置过期时间&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="220" y="320" width="260" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="h9o2qhdS5XBRjAzYTPhi-32" target="h9o2qhdS5XBRjAzYTPhi-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-32" value="登出" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#d79b00;fillColor=#ffe6cc;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="20" y="400" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="h9o2qhdS5XBRjAzYTPhi-33" target="h9o2qhdS5XBRjAzYTPhi-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-33" value="&lt;div style=&quot;color: #141414;background-color: #ffffff;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #787878;&quot;&gt;验证token有效性&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="140" y="400" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-34" value="&lt;div style=&quot;color: #141414;background-color: #ffffff;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #787878;&quot;&gt;清除登录会话信息&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="310" y="400" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="h9o2qhdS5XBRjAzYTPhi-38" target="h9o2qhdS5XBRjAzYTPhi-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-38" value="创建短链分组" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#d79b00;fillColor=#ffe6cc;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="20" y="460" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-42" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="h9o2qhdS5XBRjAzYTPhi-39" target="h9o2qhdS5XBRjAzYTPhi-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-39" value="&lt;div style=&quot;color: #141414;background-color: #ffffff;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #787878;&quot;&gt;创建用户维度的分布式锁，防止并发创建分组&lt;/span&gt;&lt;span style=&quot;color: rgb(10, 130, 110);&quot;&gt;lock&lt;/span&gt;&lt;span style=&quot;color: rgb(40, 40, 40);&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: rgb(0, 120, 200);&quot;&gt;lock&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="190" y="460" width="360" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-44" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="h9o2qhdS5XBRjAzYTPhi-41" target="h9o2qhdS5XBRjAzYTPhi-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-41" value="&lt;div style=&quot;color: #141414;background-color: #ffffff;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #787878;&quot;&gt;检查用户当前分组数量是否超过限制&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="590" y="460" width="260" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="h9o2qhdS5XBRjAzYTPhi-43" value="&lt;div style=&quot;color: #141414;background-color: #ffffff;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #787878;&quot;&gt;尝试生成唯一分组ID &amp;nbsp;因为 id 可能会重复 所以这里要重复几次&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="414" y="530" width="450" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="短链接查询读写锁" id="pGYKjX5bHO32wKMr9dwS">
+    <mxGraphModel dx="929" dy="463" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-1" value="短链接系统流程图" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="264" y="10" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="210" width="180" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-3" value="图例" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="650" y="220" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;gradientColor=#7ea6e0;" vertex="1" parent="1">
+          <mxGeometry x="590" y="250" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-5" value="请求处理节点" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="620" y="250" width="140" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-6" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;gradientColor=#ffd966;" vertex="1" parent="1">
+          <mxGeometry x="590" y="280" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-7" value="数据操作节点" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="620" y="280" width="140" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-8" value="用户请求短链接" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;fontStyle=1;gradientColor=#7ea6e0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="60" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-9" value="缓存查询&#xa;1. 查询Redis缓存&#xa;2. 检查布隆过滤器(避免缓存穿透)&#xa;3. 查询空值缓存(避免缓存穿透)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;align=left;spacingLeft=5;gradientColor=#7ea6e0;" vertex="1" parent="1">
+          <mxGeometry x="250" y="50" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-10" value="分布式锁处理&#xa;1. 再次检查Redis缓存&#xa;2. 检查空值缓存" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;align=left;spacingLeft=5;gradientColor=#7ea6e0;" vertex="1" parent="1">
+          <mxGeometry x="530" y="55" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-11" value="查询ShortLinkGoto表" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;gradientColor=#7ea6e0;" vertex="1" parent="1">
+          <mxGeometry x="530" y="150" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-12" value="ShortLinkGoto表" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;shadow=1;gradientColor=#ea6b66;" vertex="1" parent="1">
+          <mxGeometry x="320" y="140" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-13" value="id" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="qCh66IZdXl8_dZEnRxGZ-12">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-14" value="gid" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="qCh66IZdXl8_dZEnRxGZ-12">
+          <mxGeometry y="60" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-15" value="fullShortUrl" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="qCh66IZdXl8_dZEnRxGZ-12">
+          <mxGeometry y="90" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-16" value="根据gid和fullShortUrl&#xa;查询完整短链接表&#xa;(gid为分片键，可直接映射到特定表)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;align=left;spacingLeft=5;gradientColor=#7ea6e0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="150" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-17" value="查询到短链接后&#xa;写入缓存(长链接映射到短链接)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;shadow=1;align=center;gradientColor=#ffd966;" vertex="1" parent="1">
+          <mxGeometry x="50" y="260" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-18" value="通过消息队列记录访问日志" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;shadow=1;gradientColor=#ffd966;" vertex="1" parent="1">
+          <mxGeometry x="300" y="260" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-19" value="日志处理流程" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#d5e8d4;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;strokeColor=#82b366;shadow=1;fontSize=14;gradientColor=#97d077;" vertex="1" parent="1">
+          <mxGeometry x="30" y="350" width="520" height="194" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-20" value="消息队列消费(记录日志)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;shadow=1;align=center;gradientColor=#ffd966;" vertex="1" parent="1">
+          <mxGeometry x="50" y="390" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-21" value="幂等性处理&#xa;(Redis生成唯一ID)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;shadow=1;align=center;gradientColor=#ffd966;" vertex="1" parent="1">
+          <mxGeometry x="250" y="390" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-22" value="执行统计数据保存" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;shadow=1;align=center;gradientColor=#ffd966;" vertex="1" parent="1">
+          <mxGeometry x="370" y="460" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-23" value="获取读锁&#xa;(只进行新增操作)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;shadow=1;align=center;gradientColor=#ffd966;" vertex="1" parent="1">
+          <mxGeometry x="210" y="460" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-24" value="保存各类统计数据" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;shadow=1;align=center;gradientColor=#ffd966;" vertex="1" parent="1">
+          <mxGeometry x="50" y="460" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-25" value="短链接分组修改流程" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e1d5e7;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;strokeColor=#9673a6;shadow=1;fontSize=14;gradientColor=#d5739d;" vertex="1" parent="1">
+          <mxGeometry x="30" y="580" width="650" height="194" as="geometry">
+            <mxRectangle x="30" y="580" width="170" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-26" value="说明: 这里使用lock而非trylock是因为lock会阻塞等待部分消息队列，&#xa;而trylock会等待过多的消息队列" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;fontSize=12;align=left;spacingLeft=5;gradientColor=#ffd966;" vertex="1" parent="1">
+          <mxGeometry x="390" y="610" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-27" value="修改短链接的分组" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;shadow=1;align=center;gradientColor=#ffd966;" vertex="1" parent="1">
+          <mxGeometry x="50" y="620" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-28" value="获取写锁(lock)&#xa;(涉及增删改操作)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;shadow=1;align=center;gradientColor=#ffd966;" vertex="1" parent="1">
+          <mxGeometry x="240" y="620" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-29" value="删除原记录" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;shadow=1;align=center;gradientColor=#ffd966;" vertex="1" parent="1">
+          <mxGeometry x="50" y="700" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-30" value="创建新的带分组的记录" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;shadow=1;align=center;gradientColor=#ffd966;" vertex="1" parent="1">
+          <mxGeometry x="240" y="700" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-31" value="更新跳转关系表" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;shadow=1;align=center;gradientColor=#ffd966;" vertex="1" parent="1">
+          <mxGeometry x="440" y="700" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=0;strokeWidth=1.5;strokeColor=#666666;" edge="1" source="qCh66IZdXl8_dZEnRxGZ-8" target="qCh66IZdXl8_dZEnRxGZ-9" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-33" value="发起请求" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#333333;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="qCh66IZdXl8_dZEnRxGZ-32">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=0;strokeWidth=1.5;strokeColor=#666666;" edge="1" source="qCh66IZdXl8_dZEnRxGZ-9" target="qCh66IZdXl8_dZEnRxGZ-10" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-35" value="缓存未命中" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#333333;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="qCh66IZdXl8_dZEnRxGZ-34">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=0;strokeWidth=1.5;strokeColor=#666666;" edge="1" source="qCh66IZdXl8_dZEnRxGZ-10" target="qCh66IZdXl8_dZEnRxGZ-11" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-37" value="获取锁成功" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#333333;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="qCh66IZdXl8_dZEnRxGZ-36">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=0;strokeWidth=1.5;strokeColor=#666666;" edge="1" source="qCh66IZdXl8_dZEnRxGZ-11" target="qCh66IZdXl8_dZEnRxGZ-12" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=0;strokeWidth=1.5;strokeColor=#666666;" edge="1" source="qCh66IZdXl8_dZEnRxGZ-12" target="qCh66IZdXl8_dZEnRxGZ-16" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-40" value="获取gid和fullShortUrl" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#333333;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="qCh66IZdXl8_dZEnRxGZ-39">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=0;strokeWidth=1.5;strokeColor=#666666;" edge="1" source="qCh66IZdXl8_dZEnRxGZ-16" target="qCh66IZdXl8_dZEnRxGZ-17" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-42" value="查询成功" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#333333;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="qCh66IZdXl8_dZEnRxGZ-41">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=0;strokeWidth=1.5;strokeColor=#666666;" edge="1" source="qCh66IZdXl8_dZEnRxGZ-17" target="qCh66IZdXl8_dZEnRxGZ-18" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=0;strokeWidth=1.5;strokeColor=#666666;" edge="1" source="qCh66IZdXl8_dZEnRxGZ-20" target="qCh66IZdXl8_dZEnRxGZ-21" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-45" value="消费日志消息" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#333333;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="qCh66IZdXl8_dZEnRxGZ-44">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint x="2" y="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;shadow=0;strokeWidth=1.5;strokeColor=#666666;" edge="1" source="qCh66IZdXl8_dZEnRxGZ-21" target="qCh66IZdXl8_dZEnRxGZ-22" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="330" y="430" />
+              <mxPoint x="450" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=0;strokeWidth=1.5;strokeColor=#666666;" edge="1" source="qCh66IZdXl8_dZEnRxGZ-22" target="qCh66IZdXl8_dZEnRxGZ-23" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=0;strokeWidth=1.5;strokeColor=#666666;" edge="1" source="qCh66IZdXl8_dZEnRxGZ-23" target="qCh66IZdXl8_dZEnRxGZ-24" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=0;strokeWidth=1.5;strokeColor=#666666;" edge="1" source="qCh66IZdXl8_dZEnRxGZ-27" target="qCh66IZdXl8_dZEnRxGZ-28" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;shadow=0;strokeWidth=1.5;strokeColor=#666666;" edge="1" source="qCh66IZdXl8_dZEnRxGZ-28" target="qCh66IZdXl8_dZEnRxGZ-29" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="670" />
+              <mxPoint x="110" y="670" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=0;strokeWidth=1.5;strokeColor=#666666;" edge="1" source="qCh66IZdXl8_dZEnRxGZ-29" target="qCh66IZdXl8_dZEnRxGZ-30" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=0;strokeWidth=1.5;strokeColor=#666666;" edge="1" source="qCh66IZdXl8_dZEnRxGZ-30" target="qCh66IZdXl8_dZEnRxGZ-31" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-54" value="为什么需要读写锁？" style="text;whiteSpace=wrap;fontSize=18;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="30" y="810" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-55" value="&lt;div class=&quot;lake-content&quot;&gt;&lt;p id=&quot;u127fbf52&quot; class=&quot;ne-p&quot; style=&quot;margin: 0; padding: 0; min-height: 24px&quot;&gt;&lt;span class=&quot;ne-text&quot;&gt;因为如果 Gid 变更后，新增短链接监控获取的是旧的 Gid，自增监控记录就会统计错误问题。&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="30" y="870" width="750" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qCh66IZdXl8_dZEnRxGZ-56" value="&lt;div class=&quot;lake-content&quot;&gt;&lt;p id=&quot;uc122f878&quot; class=&quot;ne-p&quot; style=&quot;margin: 0; padding: 0; min-height: 24px&quot;&gt;&lt;span class=&quot;ne-text&quot;&gt;我们假设没有读写锁，流程如下：&lt;/span&gt;&lt;/p&gt;&lt;ol class=&quot;ne-ol&quot; style=&quot;margin: 0; padding-left: 23px&quot;&gt;&lt;li id=&quot;u0a343985&quot; data-lake-index-type=&quot;0&quot;&gt;&lt;span class=&quot;ne-text&quot;&gt;线程 A 将短链接分组从 &lt;/span&gt;&lt;code class=&quot;ne-code&quot; style=&quot;font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace; background-color: rgba(0, 0, 0, 0.06); border: 1px solid rgba(0, 0, 0, 0.08); border-radius: 2px; padding: 0px 2px&quot;&gt;&lt;span class=&quot;ne-text&quot;&gt;6688ja&lt;/span&gt;&lt;/code&gt;&lt;span class=&quot;ne-text&quot;&gt; 变更为 &lt;/span&gt;&lt;code class=&quot;ne-code&quot; style=&quot;font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace; background-color: rgba(0, 0, 0, 0.06); border: 1px solid rgba(0, 0, 0, 0.08); border-radius: 2px; padding: 0px 2px&quot;&gt;&lt;span class=&quot;ne-text&quot;&gt;8866ja&lt;/span&gt;&lt;/code&gt;&lt;span class=&quot;ne-text&quot;&gt;。注意，这个是准备要修改，还没有执行成功；&lt;/span&gt;&lt;/li&gt;&lt;li id=&quot;u067392be&quot; data-lake-index-type=&quot;0&quot;&gt;&lt;span class=&quot;ne-text&quot;&gt;同时记录短链接监控线程 B 获取短链接分组为 &lt;/span&gt;&lt;code class=&quot;ne-code&quot; style=&quot;font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace; background-color: rgba(0, 0, 0, 0.06); border: 1px solid rgba(0, 0, 0, 0.08); border-radius: 2px; padding: 0px 2px&quot;&gt;&lt;span class=&quot;ne-text&quot;&gt;6688ja&lt;/span&gt;&lt;/code&gt;&lt;span class=&quot;ne-text&quot;&gt;，准备进行自增 PV、UV、UIP 数据；&lt;/span&gt;&lt;/li&gt;&lt;li id=&quot;u136b7bd1&quot; data-lake-index-type=&quot;0&quot;&gt;&lt;span class=&quot;ne-text&quot;&gt;此时线程 A 将短链接分组成功将 &lt;/span&gt;&lt;code class=&quot;ne-code&quot; style=&quot;font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace; background-color: rgba(0, 0, 0, 0.06); border: 1px solid rgba(0, 0, 0, 0.08); border-radius: 2px; padding: 0px 2px&quot;&gt;&lt;span class=&quot;ne-text&quot;&gt;6688ja&lt;/span&gt;&lt;/code&gt;&lt;span class=&quot;ne-text&quot;&gt; 变更为 &lt;/span&gt;&lt;code class=&quot;ne-code&quot; style=&quot;font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace; background-color: rgba(0, 0, 0, 0.06); border: 1px solid rgba(0, 0, 0, 0.08); border-radius: 2px; padding: 0px 2px&quot;&gt;&lt;span class=&quot;ne-text&quot;&gt;8866ja&lt;/span&gt;&lt;/code&gt;&lt;span class=&quot;ne-text&quot;&gt;；&lt;/span&gt;&lt;/li&gt;&lt;li id=&quot;u10a33cc0&quot; data-lake-index-type=&quot;0&quot;&gt;&lt;span class=&quot;ne-text&quot;&gt;线程 B 自增短链接 PV、UV、UIP 开始执行，但执行失败，因为已经没有了对应短链接的 &lt;/span&gt;&lt;code class=&quot;ne-code&quot; style=&quot;font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace; background-color: rgba(0, 0, 0, 0.06); border: 1px solid rgba(0, 0, 0, 0.08); border-radius: 2px; padding: 0px 2px&quot;&gt;&lt;span class=&quot;ne-text&quot;&gt;6688ja&lt;/span&gt;&lt;/code&gt;&lt;span class=&quot;ne-text&quot;&gt; 分组。&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p id=&quot;u8dd9a76f&quot; class=&quot;ne-p&quot; style=&quot;margin: 0; padding: 0; min-height: 24px&quot;&gt;&lt;span class=&quot;ne-text&quot;&gt;为此，我们需要将短链接修改和监控数据自增隔离开来，以此来保障数据准确性。&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="30" y="910" width="560" height="240" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="MFZdVej7GKqMfpOmbQTL" name="短链crud逻辑">
+    <mxGraphModel dx="929" dy="463" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="TJsKXHvBSHU0Y0AE3xgA-1" target="TJsKXHvBSHU0Y0AE3xgA-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-1" value="创建" style="text;whiteSpace=wrap;fontSize=18;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry y="10" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="TJsKXHvBSHU0Y0AE3xgA-2" target="TJsKXHvBSHU0Y0AE3xgA-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-2" value="&lt;div style=&quot;color: #141414;background-color: #ffffff;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #787878;&quot;&gt;验证目标URL是否在白名单内&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="110" y="10" width="190" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="TJsKXHvBSHU0Y0AE3xgA-4" target="TJsKXHvBSHU0Y0AE3xgA-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-4" value="&lt;div style=&quot;color: #141414;background-color: #ffffff;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #787878;&quot;&gt;生成唯一的6位62进制短链接后缀和拼接&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="330" y="10" width="260" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="TJsKXHvBSHU0Y0AE3xgA-6" target="TJsKXHvBSHU0Y0AE3xgA-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-6" value="&lt;div style=&quot;color: #141414;background-color: #ffffff;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #787878;&quot;&gt;构建短链接实体对象,设置基础信息和统计数据初始值&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="275" y="70" width="370" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="TJsKXHvBSHU0Y0AE3xgA-8" target="TJsKXHvBSHU0Y0AE3xgA-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-8" value="&lt;div style=&quot;color: #141414;background-color: #ffffff;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #787878;&quot;&gt;构建短链接跳转关系对象,用于存储映射关系&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="305" y="120" width="310" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="TJsKXHvBSHU0Y0AE3xgA-10" target="TJsKXHvBSHU0Y0AE3xgA-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-10" value="&lt;div style=&quot;color: #141414;background-color: #ffffff;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #787878;&quot;&gt;保存短链接基本信息和跳转关系到数据库&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="315" y="190" width="290" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="TJsKXHvBSHU0Y0AE3xgA-13" target="TJsKXHvBSHU0Y0AE3xgA-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-13" value="&lt;div style=&quot;color: #141414;background-color: #ffffff;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #787878;&quot;&gt;将短链接映射关系缓存到Redis,提高访问性能&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="300" y="250" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-14" value="&lt;div style=&quot;color: #141414;background-color: #ffffff;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #787878;&quot;&gt;将短链接添加到布隆过滤器,用于防止缓存穿透&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="295" y="310" width="330" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="TJsKXHvBSHU0Y0AE3xgA-22" target="TJsKXHvBSHU0Y0AE3xgA-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-22" value="分布式锁创建" style="text;whiteSpace=wrap;fontSize=18;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry y="360" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="TJsKXHvBSHU0Y0AE3xgA-23" target="TJsKXHvBSHU0Y0AE3xgA-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-23" value="&lt;div style=&quot;color: #141414;background-color: #ffffff;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #787878;&quot;&gt;验证原始URL是否在白名单中&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="160" y="360" width="190" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="TJsKXHvBSHU0Y0AE3xgA-25" target="TJsKXHvBSHU0Y0AE3xgA-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-25" value="&lt;div style=&quot;color: #141414;background-color: #ffffff;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #787878;&quot;&gt;获取分布式锁&lt;/span&gt;&lt;span style=&quot;color: rgb(10, 130, 110);&quot;&gt;lock&lt;/span&gt;&lt;span style=&quot;color: rgb(40, 40, 40);&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: rgb(0, 120, 200);&quot;&gt;lock&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="380" y="360" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-27" value="同上" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="585" y="360" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="TJsKXHvBSHU0Y0AE3xgA-30" target="TJsKXHvBSHU0Y0AE3xgA-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-30" value="修改" style="text;whiteSpace=wrap;fontSize=18;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry y="430" width="50" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="TJsKXHvBSHU0Y0AE3xgA-31" target="TJsKXHvBSHU0Y0AE3xgA-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-31" value="&lt;div style=&quot;color: #141414;background-color: #ffffff;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #787878;&quot;&gt;验证原始URL是否在白名单中&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="85" y="430" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-39" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="TJsKXHvBSHU0Y0AE3xgA-33" target="TJsKXHvBSHU0Y0AE3xgA-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-33" value="&lt;div style=&quot;color: #141414;background-color: #ffffff;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #787878;&quot;&gt;查询当前短链接记录&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="305" y="430" width="135" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-41" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="TJsKXHvBSHU0Y0AE3xgA-37" target="TJsKXHvBSHU0Y0AE3xgA-40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-43" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="TJsKXHvBSHU0Y0AE3xgA-37" target="TJsKXHvBSHU0Y0AE3xgA-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-37" value="&lt;div style=&quot;color: #141414;background-color: #ffffff;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #787878;&quot;&gt;判断是否要切换为其他分组&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="480" y="430" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-40" value="&lt;div style=&quot;color: #141414;background-color: #ffffff;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #787878;&quot;&gt;同分组更新:直接修改原记录&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="690" y="390" width="210" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-45" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="TJsKXHvBSHU0Y0AE3xgA-42" target="TJsKXHvBSHU0Y0AE3xgA-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-42" value="&lt;div style=&quot;color: #141414;background-color: #ffffff;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #787878;&quot;&gt;跨分组短链接更新：高并发安全处理 使用读写锁的写锁&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="375" y="500" width="390" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-47" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="TJsKXHvBSHU0Y0AE3xgA-44" target="TJsKXHvBSHU0Y0AE3xgA-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-44" value="&lt;div style=&quot;color: #141414;background-color: #ffffff;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #787878;&quot;&gt;标记原记录为删除&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="495" y="565" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-49" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="TJsKXHvBSHU0Y0AE3xgA-46" target="TJsKXHvBSHU0Y0AE3xgA-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-46" value="&lt;div style=&quot;color: #141414;background-color: #ffffff;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #787878;&quot;&gt;创建新分组记录&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="505" y="640" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TJsKXHvBSHU0Y0AE3xgA-48" value="&lt;div style=&quot;color: #141414;background-color: #ffffff;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #787878;&quot;&gt;更新跳转关系表&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="505" y="700" width="130" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,75 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5">
+  <diagram name="第 1 页" id="nv_u26HUysKKsIoTy5mf">
+    <mxGraphModel dx="849" dy="425" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="EWQR0wD9L3Sro-KmUWIz-32" value="Stream与传统For循环的对比" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="260" y="20" width="340" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EWQR0wD9L3Sro-KmUWIz-33" value="Stream操作" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="120" y="70" width="250" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EWQR0wD9L3Sro-KmUWIz-34" value="传统For循环" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="470" y="70" width="250" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EWQR0wD9L3Sro-KmUWIz-35" value="执行方式" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="30" y="130" width="780" height="120" as="geometry">
+            <mxRectangle x="30" y="130" width="100" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EWQR0wD9L3Sro-KmUWIz-36" value="延迟执行：中间操作（如filter, map等）只有在终结操作（如collect, foreach等）调用时才会执行" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=10;" vertex="1" parent="EWQR0wD9L3Sro-KmUWIz-35">
+          <mxGeometry x="90" y="40" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EWQR0wD9L3Sro-KmUWIz-37" value="即时执行：循环体内的所有操作按顺序立即执行，不存在延迟" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=left;spacingLeft=10;" vertex="1" parent="EWQR0wD9L3Sro-KmUWIz-35">
+          <mxGeometry x="440" y="40" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EWQR0wD9L3Sro-KmUWIz-38" value="对数据源的影响" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="30" y="270" width="780" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="EWQR0wD9L3Sro-KmUWIz-39" value="不会改变原始数据源：每次操作都会生成一个新的流，原来的数据不受影响" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=10;" vertex="1" parent="EWQR0wD9L3Sro-KmUWIz-38">
+          <mxGeometry x="90" y="40" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EWQR0wD9L3Sro-KmUWIz-40" value="可能直接修改原始数据：循环过程中可以直接修改集合中的元素" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=left;spacingLeft=10;" vertex="1" parent="EWQR0wD9L3Sro-KmUWIz-38">
+          <mxGeometry x="440" y="40" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EWQR0wD9L3Sro-KmUWIz-41" value="数据存储方式" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="30" y="410" width="780" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="EWQR0wD9L3Sro-KmUWIz-42" value="不存储数据：Stream不是数据结构，而是通过管道获取源数据并操作" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=10;" vertex="1" parent="EWQR0wD9L3Sro-KmUWIz-41">
+          <mxGeometry x="90" y="40" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EWQR0wD9L3Sro-KmUWIz-43" value="直接处理数据结构：在现有数据结构上直接进行迭代和操作" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=left;spacingLeft=10;" vertex="1" parent="EWQR0wD9L3Sro-KmUWIz-41">
+          <mxGeometry x="440" y="40" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EWQR0wD9L3Sro-KmUWIz-44" value="并行处理" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="30" y="550" width="780" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="EWQR0wD9L3Sro-KmUWIz-45" value="并行支持：可以通过parallelStream()轻松实现并行处理，充分利用多核CPU优势" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=10;" vertex="1" parent="EWQR0wD9L3Sro-KmUWIz-44">
+          <mxGeometry x="90" y="40" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EWQR0wD9L3Sro-KmUWIz-46" value="默认串行：需要额外编写复杂代码才能实现并行处理" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=left;spacingLeft=10;" vertex="1" parent="EWQR0wD9L3Sro-KmUWIz-44">
+          <mxGeometry x="440" y="40" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EWQR0wD9L3Sro-KmUWIz-47" value="代码风格" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="30" y="690" width="780" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="EWQR0wD9L3Sro-KmUWIz-48" value="声明式编程：关注做什么而不是怎么做，代码更简洁易读" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=10;" vertex="1" parent="EWQR0wD9L3Sro-KmUWIz-47">
+          <mxGeometry x="90" y="40" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EWQR0wD9L3Sro-KmUWIz-49" value="命令式编程：需要明确指定每一步操作，代码相对冗长" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=left;spacingLeft=10;" vertex="1" parent="EWQR0wD9L3Sro-KmUWIz-47">
+          <mxGeometry x="440" y="40" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EWQR0wD9L3Sro-KmUWIz-50" value="示例对比" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="30" y="830" width="780" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="EWQR0wD9L3Sro-KmUWIz-51" value="list.stream()&#xa;    .filter(n -&gt; n &gt; 10)&#xa;    .map(n -&gt; n * 2)&#xa;    .collect(Collectors.toList());" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=10;fontFamily=Courier New;" vertex="1" parent="EWQR0wD9L3Sro-KmUWIz-50">
+          <mxGeometry x="90" y="40" width="250" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="EWQR0wD9L3Sro-KmUWIz-52" value="List&lt;Integer&gt; result = new ArrayList&lt;&gt;();&#xa;for (Integer n : list) {&#xa;    if (n &gt; 10) {&#xa;        result.add(n * 2);&#xa;    }&#xa;}" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=left;spacingLeft=10;fontFamily=Courier New;" vertex="1" parent="EWQR0wD9L3Sro-KmUWIz-50">
+          <mxGeometry x="440" y="40" width="250" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
