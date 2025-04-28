@@ -1,0 +1,183 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5" pages="2">
+  <diagram name="第 1 页" id="iTByqGDiHVttWcRSCVwt">
+    <mxGraphModel dx="837" dy="461" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="b4sINxbvp_oJiMHNrM8n-6" value="分库分表字段的选择&#xa;在单库单表中，可以直接进行 join查询和分页操作，分库分表后，数据会分到不同的数据库和表上，可能会导致跨库查询等问题，因此，分表字段的选择，决定了能否将原本需要进行分页的数据划分到同一张表上，从而避免跨库查询。&#xa;&#xa;So，如何选择分库分表字段？&#xa;&#xa;有用过社区电商产品（橙心优选，美团优选，多多买菜，盒马邻里）的小伙伴应该知道，社区电商的模式是：当日购买，次日履约。&#xa;&#xa;为了保证履约的时效，用户在下单时，商城端都是把订单下到最近的仓库，因此，可以根据仓库编码来分库。" style="text;whiteSpace=wrap;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="20" y="170" width="560" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="b4sINxbvp_oJiMHNrM8n-8" value="最佳实践&#xa;在实际生产环境中，许多大型系统会采用以下策略：&#xa;中小型应用：单库通常控制在 100-300 张表&#xa;大型应用：单库通常控制在 500-1000 张表&#xa;超大型应用：采用分库分表策略，每个库仍然控制在 1000 张表左右" style="text;whiteSpace=wrap;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="20" y="10" width="560" height="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="qeTdzUXCNJriYRPZPILG" name="性能瓶颈">
+    <mxGraphModel dx="837" dy="461" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="数据库性能瓶颈分析与解决方案" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="284.5" y="30" width="600" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="数据库性能瓶颈类型" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="484.5" y="90" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="IO瓶颈" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="284.5" y="200" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="CPU瓶颈" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="704.5" y="200" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;" edge="1" parent="1" source="3" target="4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="564.5" y="350" as="sourcePoint" />
+            <mxPoint x="614.5" y="300" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="584.5" y="170" />
+              <mxPoint x="374.5" y="170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;" edge="1" parent="1" source="3" target="5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="564.5" y="350" as="sourcePoint" />
+            <mxPoint x="614.5" y="300" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="584.5" y="170" />
+              <mxPoint x="794.5" y="170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8" value="磁盘读IO瓶颈&#xa;热点数据太多，数据库缓存放不下，&#xa;每次查询产生大量IO，降低查询速度" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#f8cecc;strokeColor=#b85450;opacity=70;align=center;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="174.5" y="290" width="240" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="网络IO瓶颈&#xa;请求的数据太多，网络带宽不够" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#f8cecc;strokeColor=#b85450;opacity=70;align=center;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="334.5" y="390" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1.5;" edge="1" parent="1" source="4" target="8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="564.5" y="350" as="sourcePoint" />
+            <mxPoint x="614.5" y="300" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="374.5" y="270" />
+              <mxPoint x="294.5" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1.5;" edge="1" parent="1" source="4" target="9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="564.5" y="350" as="sourcePoint" />
+            <mxPoint x="614.5" y="300" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="374.5" y="270" />
+              <mxPoint x="454.5" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="12" value="SQL问题瓶颈&#xa;SQL中包含join、group by、order by、&#xa;非索引字段条件查询等，增加CPU运算" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;opacity=70;align=center;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="594.5" y="290" width="235.5" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="数据量瓶颈&#xa;单表数据量太大，查询时扫描行太多，&#xa;SQL效率低，CPU率先出现瓶颈" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;opacity=70;align=center;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="754.5" y="410" width="240" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1.5;" edge="1" parent="1" source="5" target="12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="564.5" y="350" as="sourcePoint" />
+            <mxPoint x="614.5" y="300" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="794.5" y="270" />
+              <mxPoint x="714.5" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="15" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1.5;" edge="1" parent="1" source="5" target="13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="564.5" y="350" as="sourcePoint" />
+            <mxPoint x="614.5" y="300" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="794.5" y="270" />
+              <mxPoint x="874.5" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="16" value="解决方案：&#xa;分库和垂直分表" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fontSize=14;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="174.5" y="390" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="17" value="解决方案：&#xa;分库" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fontSize=14;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="334.5" y="490" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="18" value="解决方案：&#xa;SQL优化&#xa;建立合适索引&#xa;业务代码计算" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fontSize=14;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="594.5" y="410" width="140" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="解决方案：&#xa;水平分表" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fontSize=14;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="754.5" y="510" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="20" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1.5;dashed=1;" edge="1" parent="1" source="8" target="16">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="564.5" y="450" as="sourcePoint" />
+            <mxPoint x="614.5" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="21" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1.5;dashed=1;" edge="1" parent="1" source="9" target="17">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="564.5" y="450" as="sourcePoint" />
+            <mxPoint x="614.5" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="22" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1.5;dashed=1;" edge="1" parent="1" source="12" target="18">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="564.5" y="450" as="sourcePoint" />
+            <mxPoint x="614.5" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="23" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1.5;dashed=1;" edge="1" parent="1" source="13" target="19">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="564.5" y="450" as="sourcePoint" />
+            <mxPoint x="614.5" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="24" value="图例" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="924.5" y="610" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="25" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#f8cecc;strokeColor=#b85450;opacity=70;" vertex="1" parent="1">
+          <mxGeometry x="924.5" y="650" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="26" value="IO瓶颈" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="964.5" y="645" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="27" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;opacity=70;" vertex="1" parent="1">
+          <mxGeometry x="924.5" y="680" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="28" value="CPU瓶颈" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="964.5" y="675" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="29" value="" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fontSize=14;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="924.5" y="710" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="30" value="解决方案" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="964.5" y="705" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="31" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=1.5;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="924.5" y="740" as="sourcePoint" />
+            <mxPoint x="954.5" y="740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="32" value="因果关系" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="964.5" y="735" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="33" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=1.5;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="924.5" y="770" as="sourcePoint" />
+            <mxPoint x="954.5" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="34" value="解决对应" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="964.5" y="765" width="100" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

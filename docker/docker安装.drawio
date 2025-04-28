@@ -1,0 +1,46 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5" pages="3">
+  <diagram name="第 1 页" id="H-iZ49pWcgYOEIqQxRtu">
+    <mxGraphModel>
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="OSd0r5KmQlqMWjZCXjK1" name="windowdocker">
+    <mxGraphModel dx="802" dy="594" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="uJeWBwgKuPbTwCSD6VUZ-1" value="报错：Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform" style="text;whiteSpace=wrap;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="60" y="70" width="560" height="70" as="geometry" />
+        </mxCell>
+        <UserObject label="容器内网络要这么来&#xa;jdbc:mysql://host.docker.internal:3306/xxl_job?useUnicode=true&amp;characterEncoding=UTF-8" link="jdbc:mysql://host.docker.internal:3306/xxl_job?useUnicode=true&amp;characterEncoding=UTF-8" id="skPQ79uXhdagiwM7W4NK-1">
+          <mxCell style="text;whiteSpace=wrap;fontSize=18;" vertex="1" parent="1">
+            <mxGeometry x="60" y="230" width="560" height="70" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="v_8nxmdWb47NoL09HEI0" name="nacos">
+    <mxGraphModel dx="802" dy="594" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="E0ifkXi0EGVqcfH-inup-1" value="docker run \&#xa;-d -p 8848:8848 \&#xa;-p 9848:9848 \&#xa;--name nacos2 \&#xa;-e MODE=standalone \&#xa;-e TIME_ZONE=&#39;Asia/Shanghai&#39; \&#xa;nacos/nacos-server:v2.1.2" style="text;whiteSpace=wrap;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="50" y="100" width="300" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="E0ifkXi0EGVqcfH-inup-2" value="&lt;div style=&quot;color: #141414;background-color: #ffffff;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 12px;line-height: 16px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #141414;&quot;&gt;docker run &lt;/span&gt;&lt;span style=&quot;color: #0078b4;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;color: #141414;&quot;&gt;d &lt;/span&gt;&lt;span style=&quot;color: #0078b4;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;color: #141414;&quot;&gt;p &lt;/span&gt;&lt;span style=&quot;color: #285078;&quot;&gt;8848&lt;/span&gt;&lt;span style=&quot;color: #141414;&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;color: #285078;&quot;&gt;8848&lt;/span&gt;&lt;span style=&quot;color: #141414;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #0078b4;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;color: #141414;&quot;&gt;p &lt;/span&gt;&lt;span style=&quot;color: #285078;&quot;&gt;9848&lt;/span&gt;&lt;span style=&quot;color: #141414;&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;color: #285078;&quot;&gt;9848&lt;/span&gt;&lt;span style=&quot;color: #141414;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #0078b4;&quot;&gt;--&lt;/span&gt;&lt;span style=&quot;color: #141414;&quot;&gt;name nacos2 &lt;/span&gt;&lt;span style=&quot;color: #0078b4;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;color: #141414;&quot;&gt;e MODE&lt;/span&gt;&lt;span style=&quot;color: #0078b4;&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;color: #141414;&quot;&gt;standalone &lt;/span&gt;&lt;span style=&quot;color: #0078b4;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;color: #141414;&quot;&gt;e TIME_ZONE&lt;/span&gt;&lt;span style=&quot;color: #0078b4;&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;color: #3c5078;&quot;&gt;&#39;&lt;/span&gt;&lt;span style=&quot;color: #3ca087;&quot;&gt;Asia/Shanghai&lt;/span&gt;&lt;span style=&quot;color: #3c5078;&quot;&gt;&#39;&lt;/span&gt;&lt;span style=&quot;color: #141414;&quot;&gt; nacos&lt;/span&gt;&lt;span style=&quot;color: #0078b4;&quot;&gt;/&lt;/span&gt;&lt;span style=&quot;color: #141414;&quot;&gt;nacos&lt;/span&gt;&lt;span style=&quot;color: #0078b4;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot;color: #141414;&quot;&gt;server:v2.&lt;/span&gt;&lt;span style=&quot;color: #285078;&quot;&gt;1.2&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="60" y="330" width="560" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="E0ifkXi0EGVqcfH-inup-3" value="linux" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="90" y="33" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="E0ifkXi0EGVqcfH-inup-4" value="windows" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="75" y="280" width="90" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

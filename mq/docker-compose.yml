@@ -1,0 +1,49 @@
+version: '3'
+
+networks:
+  rocketmq:
+    name: rocketmq
+
+services:
+  rmqnamesrv:
+    image: apache/rocketmq:5.3.1
+    container_name: rmqnamesrv
+    ports:
+      - 9876:9876
+    networks:
+      - rocketmq
+    command: sh mqnamesrv
+    restart: always
+
+  rmqbroker:
+    image: apache/rocketmq:5.3.1
+    container_name: rmqbroker
+    ports:
+      - 10912:10912
+      - 10911:10911
+      - 10909:10909
+      - 18080:8080
+      - 18081:8081
+    environment:
+      - NAMESRV_ADDR=rmqnamesrv:9876
+    volumes:
+      - /d/rockermqconfig/broker.conf:/home/rocketmq/rocketmq-5.3.1/conf/broker.conf
+    networks:
+      - rocketmq
+    command: sh mqbroker --enable-proxy -c /home/rocketmq/rocketmq-5.3.1/conf/broker.conf
+    depends_on:
+      - rmqnamesrv
+    restart: always
+
+  rmqadmin:
+    image: styletang/rocketmq-console-ng
+    container_name: rmqadmin
+    ports:
+      - 8089:8080
+    environment:
+      - JAVA_OPTS=-Drocketmq.namesrv.addr=rmqnamesrv:9876 -Dcom.rocketmq.sendMessageWithVIPChannel=false
+    networks:
+      - rocketmq
+    depends_on:
+      - rmqnamesrv
+    restart: always

@@ -1,0 +1,25 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5">
+  <diagram name="第 1 页" id="5GZ4NHQGsg5PhgL1dQtw">
+    <mxGraphModel dx="768" dy="493" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="auMjO5ENXnm0f4GIlcYc-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" parent="1" source="auMjO5ENXnm0f4GIlcYc-1" target="auMjO5ENXnm0f4GIlcYc-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="auMjO5ENXnm0f4GIlcYc-1" value="15秒ppt1介绍&lt;div&gt;我简单介绍一下我的xxx系统的大致情况&lt;/div&gt;&lt;div&gt;我的名字是xxx，指导老师是xxx&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="90" width="340" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="auMjO5ENXnm0f4GIlcYc-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" parent="1" source="auMjO5ENXnm0f4GIlcYc-7" target="auMjO5ENXnm0f4GIlcYc-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="auMjO5ENXnm0f4GIlcYc-7" value="20秒ppt2解释&lt;div&gt;我们来看一下系统创新点与设计特色&lt;br&gt;&lt;div&gt;系统设计采用轻量的框架以及一些技术，降低开销开发成本&lt;br&gt;&lt;/div&gt;&lt;div&gt;用到了ai方面来进行游戏自动化控制&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="15" y="120" width="490" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="auMjO5ENXnm0f4GIlcYc-9" value="25秒ppt2解释&lt;div&gt;系统具体实现是先准备数据集，然后训练模型&lt;/div&gt;&lt;div&gt;然后利用这个ai模型来测试和评估&lt;/div&gt;&lt;div&gt;比如测试完可以评估检测精度，处理速度&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="70" y="270" width="380" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

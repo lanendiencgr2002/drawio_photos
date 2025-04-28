@@ -1,0 +1,34 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5">
+  <diagram name="第 1 页" id="Q4OFAbdMH7MQf5ugXVk7">
+    <mxGraphModel dx="806" dy="760" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="53QK9W7e084x2AVHhH6R-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="53QK9W7e084x2AVHhH6R-1" target="53QK9W7e084x2AVHhH6R-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="53QK9W7e084x2AVHhH6R-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="53QK9W7e084x2AVHhH6R-1" target="53QK9W7e084x2AVHhH6R-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="53QK9W7e084x2AVHhH6R-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="53QK9W7e084x2AVHhH6R-1" target="53QK9W7e084x2AVHhH6R-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="53QK9W7e084x2AVHhH6R-1" value="配置文件config_qwe" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="80" y="150" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="53QK9W7e084x2AVHhH6R-2" value="账号1" style="whiteSpace=wrap;html=1;fontSize=18;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="240" y="70" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="53QK9W7e084x2AVHhH6R-5" value="账号2" style="whiteSpace=wrap;html=1;fontSize=18;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="240" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="53QK9W7e084x2AVHhH6R-10" value="&lt;div&gt;配置文件&lt;/div&gt;&lt;div&gt;all_controller&lt;/div&gt;&lt;div&gt;[[每个账号]]&lt;/div&gt;&lt;div&gt;name，配置文件&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="30" y="390" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="53QK9W7e084x2AVHhH6R-11" value="日志生成：&lt;div&gt;时间_配置文件后缀_name&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="240" y="340" width="230" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

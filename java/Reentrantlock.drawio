@@ -1,0 +1,176 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5">
+  <diagram name="第 1 页" id="GN-5YnuFJHpItr4DaluO">
+    <mxGraphModel dx="1767" dy="796" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="ReentrantLock重入锁工作原理" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="396" y="20" width="378" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="新线程" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="120" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="是否公平锁" style="rhombus;whiteSpace=wrap;html=1;fontSize=16;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="105" y="180" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="3" target="4" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="180" y="170" as="sourcePoint" />
+            <mxPoint x="230" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6" value="线程1&lt;br&gt;(链表头部)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="660" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="线程2" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="480" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="线程3" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="6" target="7" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="590" y="270" as="sourcePoint" />
+            <mxPoint x="640" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="10" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="7" target="8" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="420" y="270" as="sourcePoint" />
+            <mxPoint x="470" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11" value="是，则加入同步队列尾部" style="endArrow=classic;html=1;rounded=0;fontSize=14;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontColor=#006600;" parent="1" source="4" target="8" edge="1">
+          <mxGeometry x="0.5556" y="40" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="250" as="sourcePoint" />
+            <mxPoint x="310" y="200" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="12" value="state&lt;br&gt;(锁状态变量)" style="ellipse;whiteSpace=wrap;html=1;fontSize=16;fillColor=#d5e8d4;strokeColor=#82b366;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="440" y="370" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="否，则CAS修改state争抢锁" style="endArrow=classic;html=1;rounded=0;fontSize=14;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontColor=#990000;" parent="1" source="4" target="12" edge="1">
+          <mxGeometry x="-0.5135" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="180" y="420" as="sourcePoint" />
+            <mxPoint x="230" y="370" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="180" y="410" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14" value="CAS修改state争抢锁" style="endArrow=classic;html=1;rounded=0;fontSize=14;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="6" target="12" edge="1">
+          <mxGeometry x="-0.2" y="-20" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="650" y="370" as="sourcePoint" />
+            <mxPoint x="700" y="320" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="720" y="410" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="15" value="争抢不到则入同步队列等待，&lt;br&gt;同步队列是一个双向链表。" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#e1d5e7;strokeColor=#9673a6;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="120" y="500" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="争抢失败" style="endArrow=classic;html=1;rounded=0;fontSize=14;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="12" target="15" edge="1">
+          <mxGeometry x="0.0655" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="480" as="sourcePoint" />
+            <mxPoint x="310" y="430" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="240" y="438" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="17" value="线程4" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#e1d5e7;strokeColor=#9673a6;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="610" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="18" value="线程5" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#e1d5e7;strokeColor=#9673a6;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="120" y="610" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="17" target="18" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="270" y="650" as="sourcePoint" />
+            <mxPoint x="320" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="20" value="被唤醒则会加到同步队列" style="endArrow=classic;html=1;rounded=0;fontSize=14;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.225;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="17" target="8" edge="1">
+          <mxGeometry x="0.3818" y="-22" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="370" y="520" as="sourcePoint" />
+            <mxPoint x="330" y="280" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="390" y="486" />
+              <mxPoint x="327" y="400" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="21" value="线程&lt;br&gt;(获得锁)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="630" y="500" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="22" value="争抢成功" style="endArrow=classic;html=1;rounded=0;fontSize=14;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="12" target="21" edge="1">
+          <mxGeometry x="0.1765" y="20" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="630" y="450" as="sourcePoint" />
+            <mxPoint x="680" y="400" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="690" y="438" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="23" value="条件condition不满足时&lt;br&gt;保释人入等待队列等待" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#990000;" parent="1" vertex="1">
+          <mxGeometry x="200" y="565" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="24" value="公平锁：线程按照FIFO的顺序获取锁，新线程需要先检查同步队列，有线程在等待则加入队尾" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fontSize=14;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="800" y="120" width="280" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="25" value="非公平锁：新线程可以直接尝试获取锁，不用检查同步队列，会导致等待中的线程可能长时间无法获取锁" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fontSize=14;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="800" y="210" width="280" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="26" value="ReentrantLock使用CAS操作修改state状态变量来实现锁的获取和释放" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fontSize=14;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="800" y="300" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="27" value="图例说明" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="800" y="380" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="28" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="800" y="420" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="29" value="新线程" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="840" y="415" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="30" value="" style="rhombus;whiteSpace=wrap;html=1;fontSize=14;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="800" y="450" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="31" value="决策点" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="840" y="445" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="32" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="800" y="480" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="33" value="同步队列节点" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="840" y="475" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="34" value="" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="800" y="510" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="35" value="state状态变量" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="840" y="505" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="36" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="800" y="540" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="37" value="等待队列节点" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="840" y="535" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="38" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="800" y="570" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="39" value="获得锁的线程" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="840" y="565" width="100" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

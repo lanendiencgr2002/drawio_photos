@@ -1,0 +1,291 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5" pages="2">
+  <diagram name="第 1 页" id="jY4eSKbLZcjprV4IglCA">
+    <mxGraphModel dx="748" dy="526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="D6V7FmMj9IltL1He5zV4-1" value=".Java中什么情况会导致死锁？" style="text;whiteSpace=wrap;fontSize=18;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="10" y="10" width="250" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="D6V7FmMj9IltL1He5zV4-2" value="&lt;font style=&quot;font-size: 24px&quot;&gt;&lt;b&gt;Java死锁产生原因及避免方法&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="260" y="20" width="380" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="D6V7FmMj9IltL1He5zV4-3" value="&lt;font style=&quot;font-size: 18px&quot;&gt;&lt;b&gt;死锁产生的必要条件&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="70" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="D6V7FmMj9IltL1He5zV4-4" value="&lt;b&gt;互斥条件&lt;/b&gt;&lt;br&gt;每个资源只能被一个线程占用" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="200" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D6V7FmMj9IltL1He5zV4-5" value="&lt;b&gt;占有并等待条件&lt;/b&gt;&lt;br&gt;线程在持有至少一个资源的同时，等待获取其他资源" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="200" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D6V7FmMj9IltL1He5zV4-6" value="&lt;b&gt;不可抢占条件&lt;/b&gt;&lt;br&gt;线程获取的资源在使用完之前不能被其他线程强行剥夺" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="200" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D6V7FmMj9IltL1He5zV4-7" value="&lt;b&gt;循环等待条件&lt;/b&gt;&lt;br&gt;多个线程形成一种头尾相接的循环等待资源关系" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="200" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D6V7FmMj9IltL1He5zV4-8" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="D6V7FmMj9IltL1He5zV4-3" target="D6V7FmMj9IltL1He5zV4-4" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510" y="400" as="sourcePoint" />
+            <mxPoint x="560" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D6V7FmMj9IltL1He5zV4-9" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.417;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" source="D6V7FmMj9IltL1He5zV4-3" target="D6V7FmMj9IltL1He5zV4-5" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="150" as="sourcePoint" />
+            <mxPoint x="170" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D6V7FmMj9IltL1He5zV4-10" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.583;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" source="D6V7FmMj9IltL1He5zV4-3" target="D6V7FmMj9IltL1He5zV4-6" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="293" y="150" as="sourcePoint" />
+            <mxPoint x="370" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D6V7FmMj9IltL1He5zV4-11" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="D6V7FmMj9IltL1He5zV4-3" target="D6V7FmMj9IltL1He5zV4-7" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="327" y="150" as="sourcePoint" />
+            <mxPoint x="570" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D6V7FmMj9IltL1He5zV4-12" value="&lt;font style=&quot;font-size: 18px&quot;&gt;&lt;b&gt;避免死锁的方法&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="270" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="D6V7FmMj9IltL1He5zV4-13" value="&lt;b&gt;按序申请资源&lt;/b&gt;&lt;br&gt;确保所有线程按照相同的顺序获取多个锁时，按照相同的顺序获取锁" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="390" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="D6V7FmMj9IltL1He5zV4-14" value="&lt;b&gt;尽量减少锁的范围&lt;/b&gt;&lt;br&gt;将锁的粒度尽可能缩小，减少持有锁的时间，可通过拆分锁或使用更细粒度的锁来实现" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="390" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="D6V7FmMj9IltL1He5zV4-15" value="&lt;b&gt;使用尝试锁机制&lt;/b&gt;&lt;br&gt;使用ReentrantLock的tryLock()方法，设置尝试获取锁的超时时间，避免无限等待" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="390" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="D6V7FmMj9IltL1He5zV4-16" value="&lt;b&gt;设置超时等待时间&lt;/b&gt;&lt;br&gt;为获取锁操作设置超时时间，防止线程无限阻塞等待锁" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="490" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="D6V7FmMj9IltL1He5zV4-17" value="&lt;b&gt;避免嵌套锁&lt;/b&gt;&lt;br&gt;尽量避免在一个锁的代码块中再获取另一个锁，减少形成死锁的可能性" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="490" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="D6V7FmMj9IltL1He5zV4-18" value="&lt;b&gt;死锁检测机制&lt;/b&gt;&lt;br&gt;通过JVM工具如jstack等定期检查程序是否存在死锁，及时发现并解决" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="490" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="D6V7FmMj9IltL1He5zV4-19" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="D6V7FmMj9IltL1He5zV4-12" target="D6V7FmMj9IltL1He5zV4-13" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510" y="400" as="sourcePoint" />
+            <mxPoint x="560" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D6V7FmMj9IltL1He5zV4-20" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="D6V7FmMj9IltL1He5zV4-12" target="D6V7FmMj9IltL1He5zV4-14" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="740" y="150" as="sourcePoint" />
+            <mxPoint x="580" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D6V7FmMj9IltL1He5zV4-21" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="D6V7FmMj9IltL1He5zV4-12" target="D6V7FmMj9IltL1He5zV4-15" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="790" y="150" as="sourcePoint" />
+            <mxPoint x="780" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D6V7FmMj9IltL1He5zV4-22" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="D6V7FmMj9IltL1He5zV4-14" target="D6V7FmMj9IltL1He5zV4-16" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="240" as="sourcePoint" />
+            <mxPoint x="530" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D6V7FmMj9IltL1He5zV4-23" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="D6V7FmMj9IltL1He5zV4-14" target="D6V7FmMj9IltL1He5zV4-17" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="460" as="sourcePoint" />
+            <mxPoint x="130" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D6V7FmMj9IltL1He5zV4-24" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="D6V7FmMj9IltL1He5zV4-14" target="D6V7FmMj9IltL1He5zV4-18" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="330" y="460" as="sourcePoint" />
+            <mxPoint x="330" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="tH1GfD1y3u3PtP1Mdn5w" name="第 3 页">
+    <mxGraphModel dx="748" dy="526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="&lt;font style=&quot;font-size: 24px&quot;&gt;&lt;b&gt;Java死锁产生原因及避免方法&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="394.5" y="30" width="380" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="&lt;font style=&quot;font-size: 18px&quot;&gt;&lt;b&gt;死锁产生的必要条件&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="100" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="&lt;b&gt;互斥条件&lt;/b&gt;&lt;br&gt;每个资源只能被一个线程占用" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="200" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="&lt;b&gt;占有并等待条件&lt;/b&gt;&lt;br&gt;线程在持有至少一个资源的同时，等待获取其他资源" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="200" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="&lt;b&gt;不可抢占条件&lt;/b&gt;&lt;br&gt;线程获取的资源在使用完之前不能被其他线程强行剥夺" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="200" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="&lt;b&gt;循环等待条件&lt;/b&gt;&lt;br&gt;多个线程形成一种头尾相接的循环等待资源关系" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="200" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510" y="400" as="sourcePoint" />
+            <mxPoint x="560" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.417;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1" source="3" target="5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="150" as="sourcePoint" />
+            <mxPoint x="170" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="10" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.583;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1" source="3" target="6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="293" y="150" as="sourcePoint" />
+            <mxPoint x="370" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="327" y="150" as="sourcePoint" />
+            <mxPoint x="570" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="12" value="&lt;font style=&quot;font-size: 18px&quot;&gt;&lt;b&gt;避免死锁的方法&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="90" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="&lt;b&gt;按序申请资源&lt;/b&gt;&lt;br&gt;确保所有线程按照相同的顺序获取多个锁时，按照相同的顺序获取锁" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="240" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="&lt;b&gt;尽量减少锁的范围&lt;/b&gt;&lt;br&gt;将锁的粒度尽可能缩小，减少持有锁的时间，可通过拆分锁或使用更细粒度的锁来实现" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="240" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="&lt;b&gt;使用尝试锁机制&lt;/b&gt;&lt;br&gt;使用ReentrantLock的tryLock()方法，设置尝试获取锁的超时时间，避免无限等待" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="240" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="&lt;b&gt;设置超时等待时间&lt;/b&gt;&lt;br&gt;为获取锁操作设置超时时间，防止线程无限阻塞等待锁" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="370" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="17" value="&lt;b&gt;避免嵌套锁&lt;/b&gt;&lt;br&gt;尽量避免在一个锁的代码块中再获取另一个锁，减少形成死锁的可能性" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="370" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="18" value="&lt;b&gt;死锁检测机制&lt;/b&gt;&lt;br&gt;通过JVM工具如jstack等定期检查程序是否存在死锁，及时发现并解决" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="370" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="12" target="13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510" y="400" as="sourcePoint" />
+            <mxPoint x="560" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="20" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="12" target="14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="740" y="150" as="sourcePoint" />
+            <mxPoint x="580" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="21" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="12" target="15">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="790" y="150" as="sourcePoint" />
+            <mxPoint x="780" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="22" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="14" target="16">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1190" y="120" as="sourcePoint" />
+            <mxPoint x="1340" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="23" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="14" target="17">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1090" y="340" as="sourcePoint" />
+            <mxPoint x="940" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="24" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="14" target="18">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1140" y="340" as="sourcePoint" />
+            <mxPoint x="1140" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="25" value="&lt;font style=&quot;font-size: 18px&quot;&gt;&lt;b&gt;死锁示例场景&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="300" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="26" value="&lt;b&gt;线程1&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="400" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="27" value="&lt;b&gt;线程2&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="400" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="28" value="&lt;b&gt;资源A&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="490" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="29" value="&lt;b&gt;资源B&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="490" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="30" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="25" target="26">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510" y="400" as="sourcePoint" />
+            <mxPoint x="560" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="31" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="25" target="27">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="350" as="sourcePoint" />
+            <mxPoint x="190" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="32" value="1. 持有" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontStyle=1" edge="1" parent="1" source="26" target="28">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="350" as="sourcePoint" />
+            <mxPoint x="430" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="33" value="1. 持有" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontStyle=1" edge="1" parent="1" source="27" target="29">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="190" y="440" as="sourcePoint" />
+            <mxPoint x="190" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="34" value="2. 等待" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;fontStyle=1" edge="1" parent="1" source="28" target="29">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="430" y="440" as="sourcePoint" />
+            <mxPoint x="430" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="35" value="2. 等待" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;fontStyle=1" edge="1" parent="1" source="29" target="28">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="520" as="sourcePoint" />
+            <mxPoint x="370" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="36" value="&lt;b&gt;死锁形成原因：&lt;/b&gt;&lt;br&gt;1. 线程1获取了资源A，同时等待资源B&lt;br&gt;2. 线程2获取了资源B，同时等待资源A&lt;br&gt;3. 两个线程互相等待对方释放资源，形成死锁" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;align=left;size=15;" vertex="1" parent="1">
+          <mxGeometry x="200" y="580" width="280" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="37" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="28" target="36">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510" y="400" as="sourcePoint" />
+            <mxPoint x="560" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="38" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="29" target="36">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="190" y="550" as="sourcePoint" />
+            <mxPoint x="350" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="39" value="&lt;b&gt;图例说明&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="820" y="494" width="260" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="40" value="&lt;table border=&quot;1&quot; width=&quot;100%&quot; style=&quot;width:100%;border-collapse:collapse;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;background-color:#dae8fc;border:1px solid #6c8ebf;padding:4px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;padding:4px;&quot;&gt;死锁必要条件&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;background-color:#d5e8d4;border:1px solid #82b366;padding:4px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;padding:4px;&quot;&gt;死锁产生条件元素&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;background-color:#ffe6cc;border:1px solid #d79b00;padding:4px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;padding:4px;&quot;&gt;避免死锁方法&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;background-color:#fff2cc;border:1px solid #d6b656;padding:4px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;padding:4px;&quot;&gt;具体避免方法&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;background-color:#e1d5e7;border:1px solid #9673a6;padding:4px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;padding:4px;&quot;&gt;死锁场景示例&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;background-color:#f8cecc;border:1px solid #b85450;padding:4px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;padding:4px;&quot;&gt;竞争线程&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="39">
+          <mxGeometry y="30" width="260" height="150" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
