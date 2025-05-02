@@ -1,0 +1,28 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5">
+  <diagram name="第 1 页" id="d8sZXNw6HyvXvMa2W-Wn">
+    <mxGraphModel dx="892" dy="458" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lS3bKF0t-K6VFC8wB6GX-1" value="存储空间" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#d79b00;fillColor=#ffe6cc;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="10" y="10" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lS3bKF0t-K6VFC8wB6GX-2" value="timestamp占用4个字节&#xa;datetime占用8个字节&#xa;" style="text;whiteSpace=wrap;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="10" y="50" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lS3bKF0t-K6VFC8wB6GX-3" value="功能" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#d79b00;fillColor=#ffe6cc;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="10" y="120" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lS3bKF0t-K6VFC8wB6GX-4" value="timestamp UTC时间，系统会自动转&#xa;datetime 不会做时区转换，存储的是字面值&#xa;" style="text;whiteSpace=wrap;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="10" y="160" width="400" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lS3bKF0t-K6VFC8wB6GX-6" value="范围" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#d79b00;fillColor=#ffe6cc;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="10" y="220" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lS3bKF0t-K6VFC8wB6GX-7" value="timestamp 1000年一9999年&#xa;datetime 1970年-2038年" style="text;whiteSpace=wrap;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="10" y="270" width="260" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
