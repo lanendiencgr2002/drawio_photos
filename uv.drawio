@@ -1,0 +1,26 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5" pages="2">
+  <diagram id="F57LSxqBKcMfoDUs860i" name="命令">
+    <mxGraphModel dx="914" dy="485" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="iVuD1vlPbbCDkk_neKOl-1" value="1. 列出当前包：&#xa;uv python list&#xa;2. 找到某版本：&#xa;uv python find 3.13&#xa;3. 下载某版本：&#xa;uv python install 3.13&#xa;4. 在目录下初始化当前项目：&#xa;uv init&#xa;5. 在目录下初始化当前项目的子项目（在子目录下安装的包会到父目录下）：&#xa;uv init --project-name subproject&#xa;6. 添加依赖：&#xa;uv add xxx&#xa;7. 查看依赖树：&#xa;uv tree&#xa;8. 删除依赖：&#xa;uv remove xxx&#xa;9. 更新依赖：&#xa;uv update&#xa;10. 同步依赖（修改pyproject.toml或者和.python-version）：&#xa;uv sync&#xa;11. 语法检查：&#xa;uv tool run mypy .&#xa;12. 格式检查：&#xa;uv tool run flake8&#xa;13. 检查最快：&#xa;uv tool run ruff check&#xa;14. 在uv中使用pip：&#xa;uv pip install xxx&#xa;15. 用uv启动项目（--no-project 不使用项目配置，--with 指定要执行的文件 manim动画包）：&#xa;uv run--no-project --with manim ../eg3_manim.py&#xa;" style="text;whiteSpace=wrap;fontSize=18;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="10" y="10" width="770" height="661" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="J9E0WsryKiyHXPmmHz8e" name="其他">
+    <mxGraphModel dx="914" dy="485" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="虚拟环境搞环境变量：&#xa;1. 在powershell中查看环境变量：&#xa;$env:VIRTUAL_ENV&#xa;2. 查看当前python路径：&#xa;where.exe python&#xa;3. 设置环境变量的值：&#xa;$env:VIRTUAL_ENV=&quot;C:\Users\11923\Desktop\方便\cursor-shadow-patch-main&quot;&#xa;4. venv虚拟环境转换到uv，但又想保留所有已安装的依赖包&#xa;pip freeze &gt; requirements.txt&#xa;uv venv&#xa;.venv\Scripts\activate&#xa;uv pip install -r requirements.txt&#xa;" id="dpNdCsrDLLCwdKoVd7l6-1">
+          <mxCell style="text;whiteSpace=wrap;fontSize=18;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+            <mxGeometry x="20" y="10" width="670" height="290" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
