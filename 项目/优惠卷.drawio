@@ -1,4 +1,4 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5" pages="5">
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5" pages="6">
   <diagram name="第 1 页" id="Gh10I3yitNYJsjz1CdKF">
     <mxGraphModel dx="800" dy="593" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -36,8 +36,8 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="WRBG2tsjxCG-eHJn6zt-" name="xxl-job">
-    <mxGraphModel dx="908" dy="582" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <diagram id="WRBG2tsjxCG-eHJn6zt-" name="xxl-job分发理解">
+    <mxGraphModel dx="1034" dy="566" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -54,7 +54,7 @@
           <mxGeometry x="440" y="150" width="560" height="70" as="geometry" />
         </mxCell>
         <mxCell id="24sDXk51h5O9LctdPvGT-5" value="数据量少也可以可以一次性读取。一般从规范上来说，都是分批读取稳一点" style="text;whiteSpace=wrap;fontSize=18;" parent="1" vertex="1">
-          <mxGeometry x="440" y="210" width="560" height="70" as="geometry" />
+          <mxGeometry x="440" y="210" width="560" height="60" as="geometry" />
         </mxCell>
         <mxCell id="24sDXk51h5O9LctdPvGT-6" value="优惠券分发任务分为两种类型：立即执行和定时执行。对于立即执行的任务，我们直接通过消息队列触发发送流程；而定时执行的任务则由定时任务监控系统扫描，找到到达执行时间的任务，然后通过 XXL-Job 分布式定时框架进行处理。" style="text;whiteSpace=wrap;fontSize=18;" parent="1" vertex="1">
           <mxGeometry x="10" y="50" width="560" height="110" as="geometry" />
@@ -62,8 +62,8 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="JVuBckBPe9Q8lj32gRY3" name="xxl-job业务">
-    <mxGraphModel dx="802" dy="470" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <diagram id="JVuBckBPe9Q8lj32gRY3" name="xxl-job分发业务">
+    <mxGraphModel dx="1028" dy="562" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -94,48 +94,48 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="zmRgEdAkQoK_J6fCJCvQ" name="excel业务">
-    <mxGraphModel dx="908" dy="582" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <diagram id="zmRgEdAkQoK_J6fCJCvQ" name="excel分发业务">
+    <mxGraphModel dx="1028" dy="562" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="Bdt4vphdsgBfNzeOl4_E-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="1xpNkNWzbYq9GB-TjvsJ-1" target="hdfswMINo0O8WApvulBy-2">
+        <mxCell id="Bdt4vphdsgBfNzeOl4_E-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" parent="1" source="1xpNkNWzbYq9GB-TjvsJ-1" target="hdfswMINo0O8WApvulBy-2" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="300" y="230" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Bdt4vphdsgBfNzeOl4_E-3" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" vertex="1" connectable="0" parent="Bdt4vphdsgBfNzeOl4_E-2">
+        <mxCell id="Bdt4vphdsgBfNzeOl4_E-3" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" parent="Bdt4vphdsgBfNzeOl4_E-2" vertex="1" connectable="0">
           <mxGeometry x="0.184" y="-3" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Bdt4vphdsgBfNzeOl4_E-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="1xpNkNWzbYq9GB-TjvsJ-1" target="hdfswMINo0O8WApvulBy-3">
+        <mxCell id="Bdt4vphdsgBfNzeOl4_E-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" parent="1" source="1xpNkNWzbYq9GB-TjvsJ-1" target="hdfswMINo0O8WApvulBy-3" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="279" y="350" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Bdt4vphdsgBfNzeOl4_E-6" value="2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" vertex="1" connectable="0" parent="Bdt4vphdsgBfNzeOl4_E-5">
+        <mxCell id="Bdt4vphdsgBfNzeOl4_E-6" value="2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" parent="Bdt4vphdsgBfNzeOl4_E-5" vertex="1" connectable="0">
           <mxGeometry x="0.1025" y="4" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1xpNkNWzbYq9GB-TjvsJ-1" value="记录优惠券推送&#xa;couponTask&#xa;雪花算法生成批次id&#xa;用户上下文操作id&#xa;用户上下文商店编号&#xa;等处理或者在处理&#xa;插到数据库" style="text;whiteSpace=wrap;fontSize=18;" vertex="1" parent="1">
+        <mxCell id="1xpNkNWzbYq9GB-TjvsJ-1" value="记录优惠券推送&#xa;couponTask&#xa;雪花算法生成批次id&#xa;用户上下文操作id&#xa;用户上下文商店编号&#xa;等处理或者在处理&#xa;插到数据库" style="text;whiteSpace=wrap;fontSize=18;" parent="1" vertex="1">
           <mxGeometry x="40" y="210" width="170" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="hdfswMINo0O8WApvulBy-1" value="线程池CommandLineRunner&#xa;newSingleThreadExecutor&#xa;延迟队列take元素（阻塞）&#xa;获取当前优惠券推送记录&#xa;如果发送条数为null&#xa;修改这个记录的发送条数" style="text;whiteSpace=wrap;fontSize=18;" vertex="1" parent="1">
+        <mxCell id="hdfswMINo0O8WApvulBy-1" value="线程池CommandLineRunner&#xa;newSingleThreadExecutor&#xa;延迟队列take元素（阻塞）&#xa;获取当前优惠券推送记录&#xa;如果发送条数为null&#xa;修改这个记录的发送条数" style="text;whiteSpace=wrap;fontSize=18;" parent="1" vertex="1">
           <mxGeometry x="40" y="10" width="250" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="hdfswMINo0O8WApvulBy-2" value="线程池推送任务记录&#xa;couponTask&#xa;修改发送数量" style="text;whiteSpace=wrap;fontSize=18;" vertex="1" parent="1">
+        <mxCell id="hdfswMINo0O8WApvulBy-2" value="线程池推送任务记录&#xa;couponTask&#xa;修改发送数量" style="text;whiteSpace=wrap;fontSize=18;" parent="1" vertex="1">
           <mxGeometry x="314" y="190" width="200" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="hdfswMINo0O8WApvulBy-3" value="延迟队列兜底&lt;div&gt;redissonClient.getBlockingDeque&lt;br&gt;&lt;/div&gt;&lt;div&gt;再redissonClient.getDelayedQueue&lt;/div&gt;&lt;div&gt;延迟队列发送延迟消息时间20秒&lt;/div&gt;&lt;div&gt;后续让一直运行的线程池来处理&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;" vertex="1" parent="1">
+        <mxCell id="hdfswMINo0O8WApvulBy-3" value="延迟队列兜底&lt;div&gt;redissonClient.getBlockingDeque&lt;br&gt;&lt;/div&gt;&lt;div&gt;再redissonClient.getDelayedQueue&lt;/div&gt;&lt;div&gt;延迟队列发送延迟消息时间20秒&lt;/div&gt;&lt;div&gt;后续让一直运行的线程池来处理&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;" parent="1" vertex="1">
           <mxGeometry x="300" y="280" width="310" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="8QG46T9rDjvNUuTtNobL" name="优惠卷业务">
-    <mxGraphModel dx="884" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1028" dy="562" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -148,20 +148,34 @@
         <mxCell id="OBdd4J_mL7rvFc--q2TB-2" value="优惠券分发逻辑" style="text;whiteSpace=wrap;fontSize=18;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
           <mxGeometry x="20" y="260" width="150" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="6PXqwwWs029xVWxz3cuo-2" value="ReadExcelDistributionListener&#xa;userCouponDO&#xa;优惠卷模板id&#xa;用户id&#xa;接收时间现在&#xa;收到次数1&#xa;验证开始时间现在&#xa;验证结束时间到期时&#xa;来源platform&#xa;状态有效&#xa;创建更新时间现在&#xa;删除逻辑否&#xa;添加优惠券到用户已领取的 Redis 优惠券列表中&#xa;userCouponItemCacheKey&#xa;.append(couponTemplateDO.getId())&#xa;.append(userCouponDO.getId())&#xa; 确保所有用户都已经接到优惠券后，设置优惠券推送任务完成时间&#xa;couponTaskDO&#xa;优惠卷任务id&#xa;状态成功&#xa;完成时间现在&#xa;" style="text;whiteSpace=wrap;fontSize=18;" parent="1" vertex="1">
-          <mxGeometry x="20" y="310" width="290" height="510" as="geometry" />
+        <mxCell id="6PXqwwWs029xVWxz3cuo-2" value="ReadExcelDistributionListener&#xa;userCouponDO&#xa;优惠卷模板id&#xa;用户id&#xa;接收时间现在&#xa;收到次数1&#xa;验证开始时间现在&#xa;验证结束时间到期时&#xa;来源platform&#xa;状态有效&#xa;创建更新时间现在&#xa;删除逻辑否&#xa;添加优惠券到用户已领取的 Redis 优惠券列表中&#xa;userCouponItemCacheKey&#xa;.append(couponTemplateDO.getId())&#xa;.append(userCouponDO.getId())&#xa;确保所有用户都已经接到优惠券后，设置优惠券推送任务完成时间&#xa;couponTaskDO&#xa;优惠卷任务id&#xa;状态成功&#xa;完成时间现在&#xa;" style="text;whiteSpace=wrap;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="20" y="310" width="340" height="500" as="geometry" />
         </mxCell>
         <mxCell id="QuQV1ZZWblcAojROQte3-1" value="创建优惠券模板" style="text;whiteSpace=wrap;fontSize=18;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
           <mxGeometry x="15" y="850" width="160" height="50" as="geometry" />
         </mxCell>
         <mxCell id="QuQV1ZZWblcAojROQte3-2" value="{&#xa;  &quot;name&quot;: &quot;用户下单满10减3特大优惠&quot;,&#xa;  &quot;source&quot;: 0,&#xa;  &quot;target&quot;: 1,&#xa;  &quot;goods&quot;: &quot;&quot;,&#xa;  &quot;type&quot;: 0,&#xa;  &quot;validStartTime&quot;: &quot;2024-07-08 12:00:00&quot;,&#xa;  &quot;validEndTime&quot;: &quot;2024-08-30 23:59:59&quot;,&#xa;  &quot;stock&quot;: 20000,&#xa;  &quot;receiveRule&quot;: &quot;{\&quot;limitPerPerson\&quot;:10,\&quot;usageInstructions\&quot;:\&quot;3\&quot;}&quot;,&#xa;  &quot;consumeRule&quot;: &quot;{\&quot;termsOfUse\&quot;:10,\&quot;maximumDiscountAmount\&quot;:3,\&quot;explanationOfUnmetConditions\&quot;:\&quot;3\&quot;,\&quot;validityPeriod\&quot;:\&quot;48\&quot;}&quot;&#xa;}" style="text;whiteSpace=wrap;fontSize=18;" parent="1" vertex="1">
-          <mxGeometry x="15" y="900" width="560" height="330" as="geometry" />
+          <mxGeometry x="15" y="900" width="945" height="320" as="geometry" />
         </mxCell>
-        <mxCell id="jhRDj6lHEgU0XwSdq2Fk-1" value="分发失败记录生成 Excel" style="text;whiteSpace=wrap;fontSize=18;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-          <mxGeometry x="340" y="260" width="210" height="40" as="geometry" />
+        <mxCell id="jhRDj6lHEgU0XwSdq2Fk-1" value="分发失败记录生成 Excel" style="text;whiteSpace=wrap;fontSize=18;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="380" y="260" width="210" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="jhRDj6lHEgU0XwSdq2Fk-2" value="将分发失败数据以书签记录的形式读取到，然后封装为新的失败 Excel，并将地址保存到分发任务记录中。&#xa;根据getCouponTaskBatchId()查出来&#xa;然后存本地文件" style="text;whiteSpace=wrap;fontSize=18;" vertex="1" parent="1">
-          <mxGeometry x="340" y="300" width="360" height="130" as="geometry" />
+        <mxCell id="jhRDj6lHEgU0XwSdq2Fk-2" value="将分发失败数据以书签记录的形式读取到，然后封装为新的失败 Excel，并将地址保存到分发任务记录中。&#xa;根据getCouponTaskBatchId()查出来&#xa;然后存本地文件" style="text;whiteSpace=wrap;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="380" y="300" width="360" height="130" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="kBBsulkTavR8vpzGq7QC" name="兑换/秒杀优惠券">
+    <mxGraphModel dx="1034" dy="566" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="4NAiPIhLbRmHOlDfQfFx-1" value="验证优惠券&#xa;扣减缓存&#xa;扣减MySQL优惠券库存&#xa;添加用户领券记录&#xa;保存用户领券缓存&#xa;发送优惠券到期事件" style="text;whiteSpace=wrap;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="90" y="160" width="220" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="4NAiPIhLbRmHOlDfQfFx-2" value="1.操作优惠券库存表进行扣减库存；&#xa;2.添加优惠券模板到用户领券表；&#xa;3.保存优惠券模板到用户 Redis 领券记录中；&#xa;4.查询用户 Redis 领券记录是否持久化成功；&#xa;5.发送 RocketMQ 消息队列延时消息，到期修改用户优惠券状态。" style="text;whiteSpace=wrap;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="330" y="170" width="560" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
