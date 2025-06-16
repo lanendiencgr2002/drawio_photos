@@ -1,0 +1,118 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5">
+  <diagram name="第 1 页" id="vXytvWxTpRuZrV45p5ve">
+    <mxGraphModel dx="682" dy="410" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="MySQL数据排序实现机制详解" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#2c3e50;" vertex="1" parent="1">
+          <mxGeometry x="450" y="20" width="500" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ecf0f1;strokeColor=#bdc3c7;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="20" y="80" width="200" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_title" value="图例说明" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="90" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend1" value="排序算法" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3498db;strokeColor=#2980b9;fontColor=white;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="130" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="legend2" value="内存操作" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e74c3c;strokeColor=#c0392b;fontColor=white;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="130" y="130" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="legend3" value="磁盘操作" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f39c12;strokeColor=#e67e22;fontColor=white;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="170" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="legend4" value="索引使用" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#27ae60;strokeColor=#229954;fontColor=white;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="130" y="170" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="start" value="SQL查询包含ORDER BY" style="ellipse;whiteSpace=wrap;html=1;fillColor=#2ecc71;strokeColor=#27ae60;fontColor=white;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="95" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="index_check" value="是否存在可用索引？&lt;div&gt;(覆盖ORDER BY列)&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f39c12;strokeColor=#e67e22;fontColor=white;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="70" width="190" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="index_sort" value="使用索引排序&lt;div&gt;(Index Sort)&lt;/div&gt;&lt;div&gt;直接按索引顺序读取&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#27ae60;strokeColor=#229954;fontColor=white;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="720" y="85" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="filesort_decision" value="数据量大小判断(sort_buffer_size)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f39c12;strokeColor=#e67e22;fontColor=white;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="465" y="220" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="memory_sort" value="内存排序&lt;div&gt;(sort_buffer内)&lt;/div&gt;&lt;div&gt;快速排序算法&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e74c3c;strokeColor=#c0392b;fontColor=white;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="720" y="220" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="external_sort" value="外部排序&lt;div&gt;(磁盘临时文件)&lt;/div&gt;&lt;div&gt;归并排序算法&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f39c12;strokeColor=#e67e22;fontColor=white;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="475" y="340" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="field_count_decision" value="排序字段数量max_length_for_sort_data" style="rhombus;whiteSpace=wrap;html=1;fillColor=#9b59b6;strokeColor=#8e44ad;fontColor=white;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="250" y="330" width="190" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="single_pass_sort" value="单次排序&lt;div&gt;(Single-Pass Sort)&lt;/div&gt;&lt;div&gt;排序时包含所有字段&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3498db;strokeColor=#2980b9;fontColor=white;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry y="340" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="two_pass_sort" value="两次排序&lt;div&gt;(Two-Pass Sort)&lt;/div&gt;&lt;div&gt;先排序ID，再回表查询&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3498db;strokeColor=#2980b9;fontColor=white;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="275" y="470" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="sort_buffer_detail" value="sort_buffer内存区域&lt;div&gt;存储待排序数据&lt;/div&gt;&lt;div&gt;大小由sort_buffer_size控制&lt;/div&gt;&lt;div&gt;不足时使用临时文件&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#34495e;strokeColor=#2c3e50;fontColor=white;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="920" y="210" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="temp_file_detail" value="临时文件机制&lt;div&gt;分块排序到磁盘&lt;/div&gt;&lt;div&gt;使用归并排序合并&lt;/div&gt;&lt;div&gt;tmpdir目录存储&lt;/div&gt;&lt;div&gt;排序完成后删除&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#34495e;strokeColor=#2c3e50;fontColor=white;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="677" y="330" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="optimization_title" value="性能优化建议" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#e74c3c;" vertex="1" parent="1">
+          <mxGeometry x="50" y="580" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="optimization_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ecf0f1;strokeColor=#95a5a6;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="50" y="620" width="800" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="opt1" value="1. 创建合适索引&lt;div&gt;覆盖ORDER BY列&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#27ae60;strokeColor=#229954;fontColor=white;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="70" y="640" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="opt2" value="2. 增大sort_buffer_size&lt;div&gt;减少磁盘排序&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e74c3c;strokeColor=#c0392b;fontColor=white;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="210" y="640" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="opt3" value="3. 限制查询字段&lt;div&gt;减少排序数据量&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3498db;strokeColor=#2980b9;fontColor=white;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="350" y="640" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="opt4" value="4. 调整max_length_for_sort_data&lt;div&gt;选择合适排序方式&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9b59b6;strokeColor=#8e44ad;fontColor=white;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="490" y="640" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="opt5" value="5. 分页查询优化&lt;div&gt;避免大偏移量排序&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f39c12;strokeColor=#e67e22;fontColor=white;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="650" y="640" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="performance_note" value="注意：外部排序性能 &amp;lt;&amp;lt; 内存排序 &amp;lt;&amp;lt; 索引排序" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#e74c3c;" vertex="1" parent="1">
+          <mxGeometry x="200" y="720" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#2c3e50;" edge="1" parent="1" source="start" target="index_check">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" value="有索引" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#27ae60;fontSize=10;fontColor=#27ae60;" edge="1" parent="1" source="index_check" target="index_sort">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" value="无索引/不可用" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#e74c3c;fontSize=10;fontColor=#e74c3c;" edge="1" parent="1" source="index_check" target="filesort_decision">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" value="数据量小" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#e74c3c;fontSize=10;fontColor=#e74c3c;" edge="1" parent="1" source="filesort_decision" target="memory_sort">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" value="数据量大" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#f39c12;fontSize=10;fontColor=#f39c12;" edge="1" parent="1" source="filesort_decision" target="external_sort">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#2c3e50;" edge="1" parent="1" source="external_sort" target="field_count_decision">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7" value="字段少/总长度小" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#3498db;fontSize=10;fontColor=#3498db;" edge="1" parent="1" source="field_count_decision" target="single_pass_sort">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge8" value="字段多/总长度大" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#3498db;fontSize=10;fontColor=#3498db;" edge="1" parent="1" source="field_count_decision" target="two_pass_sort">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="detail_edge1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#95a5a6;dashed=1;" edge="1" parent="1" source="memory_sort" target="sort_buffer_detail">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="detail_edge2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#95a5a6;dashed=1;" edge="1" parent="1" source="external_sort" target="temp_file_detail">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
