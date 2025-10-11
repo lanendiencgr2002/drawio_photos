@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" version="26.1.3">
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5">
   <diagram name="第 1 页" id="V-Z3Ouj87rjAvePHcmoi">
-    <mxGraphModel dx="1050" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="834" dy="489" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -112,13 +112,13 @@
         <mxCell id="b7_Y6A8liDHWVlcpCu6--45" value="更新跳转关系表" style="rounded=0;whiteSpace=wrap;html=1;comic=1;opacity=67;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=18;fontColor=light-dark(#00CCCC,#FF9090);fontStyle=1;labelBorderColor=none;labelBackgroundColor=none;autosize=0;fillColor=#fff2cc;gradientColor=none;" parent="1" vertex="1">
           <mxGeometry x="187.5" y="680" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="XUz2naJP7t0U_49VQfLJ-1" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;为什么这里用lock：因为trylock会等待很多很多消息队列，lock会阻塞等一些消息队列&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="XUz2naJP7t0U_49VQfLJ-1" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;为什么这里用lock：因为trylock会等待很多很多消息队列，lock会阻塞等一些消息队列&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry y="545" width="700" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="XUz2naJP7t0U_49VQfLJ-3" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;为什么这里用写锁：因为这里设计到增删改可能会影响数据一致性&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="XUz2naJP7t0U_49VQfLJ-3" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;为什么这里用写锁：因为这里设计到增删改可能会影响数据一致性&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="70" y="645" width="550" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="XUz2naJP7t0U_49VQfLJ-5" value="只新增所以用读锁" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;" vertex="1" parent="1">
+        <mxCell id="XUz2naJP7t0U_49VQfLJ-5" value="只新增所以用读锁" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;" parent="1" vertex="1">
           <mxGeometry x="500" y="477.5" width="170" height="40" as="geometry" />
         </mxCell>
       </root>
